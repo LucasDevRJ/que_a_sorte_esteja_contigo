@@ -35,11 +35,14 @@ function armazenaValor() {
 
 function comparaNumerosDigitadosComSorteados() {
 	for (var i = 0; i < 6; i++) {
-		for (var j = 0; j < 6; j++) {
-			if (numerosSorteados[i] == numerosDigitados[j]) {
-				contadorAcertos++;
-			}
+		if (numerosSorteados[i] == numerosDigitados[i]) {
+			contadorAcertos++;
 		}
 	}
-	console.log("Acertos = " + contadorAcertos);
+	exibeResultado(contadorAcertos);
+}
+
+function exibeResultado(contadorAcertos) {
+	var resultado = document.getElementById("resultado-loteria");
+	resultado.innerHTML = "Você fez " + contadorAcertos + " acertos!!";
 }
