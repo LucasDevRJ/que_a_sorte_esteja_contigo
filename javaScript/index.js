@@ -37,6 +37,7 @@ function armazenaValor() {
 	}
 
 	campoValorDigitado.value = "";
+	campoValorDigitado.focus();
 }
 
 function comparaNumerosDigitadosComSorteados() {

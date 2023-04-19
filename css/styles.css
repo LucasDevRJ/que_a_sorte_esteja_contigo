@@ -34,3 +34,41 @@ body {
 	padding: 12px 0;
 	margin-top: 30px;
 }
+
+.mensagem {
+	font-size: 25px;
+	color: #FF0000;
+}
+
+.resultado {
+	font-size: 30px;
+	color: #32CD32;
+}
+
+@media screen and (min-width: 200px) and (max-width: 500px) {
+	.caixa {
+		font-size: 20px;
+	}
+
+	.titulo, .texto {
+		text-align: center;
+	}
+
+	.entrada {
+		width: 35%;
+	}
+
+	.botao {
+		width: 40%;
+	}
+}
+
+@media screen and (min-width: 501px) and (max-width: 1240px) {
+	.titulo {
+		text-align: center;
+	}
+
+	.entrada, .botao {
+		width: 30%;
+	}
+}
