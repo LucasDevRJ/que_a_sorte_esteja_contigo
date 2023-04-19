@@ -3,6 +3,7 @@ var numerosDigitados = [];
 var contadorNumerosSorteados = 0;
 var contadorNumerosDigitados = 0;
 var contadorAcertos = 0;
+var valorPremiacao = 0.0;
 var verificouAcertos = false;
 
 while (numerosSorteados.length < 6) {
@@ -44,5 +45,37 @@ function comparaNumerosDigitadosComSorteados() {
 
 function exibeResultado(contadorAcertos) {
 	var resultado = document.getElementById("resultado-loteria");
-	resultado.innerHTML = "Você fez " + contadorAcertos + " acertos!!";
+	switch (contadorAcertos) {
+		case 1:
+			valorPremiacao = 10.00;
+		break;
+
+		case 2:
+			valorPremiacao = 100.00;
+		break;
+
+		case 3:
+			valorPremiacao = 1000.00;
+		break; 
+
+		case 4:
+			valorPremiacao = 10000.00;
+		break;
+
+		case 5:
+			valorPremiacao = 100000.00;
+		break;
+
+		case 6:
+			valorPremiacao = 1000000.00;
+		break;
+ 	}
+
+ 	if (contadorAcertos > 0) {
+ 		resultado.innerHTML = "Parabéns, você fez " + contadorAcertos + " acerto(s)!!" +
+ 		"\nGanhou R$ " + valorPremiacao.toFixed(2);
+ 	} else {
+ 		resultado.innerHTML = "Infelizmente, você não acertou nenhum número";
+ 	}
+	
 }
