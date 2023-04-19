@@ -18,20 +18,25 @@ console.log(numerosSorteados);
 
 function armazenaValor() {
 	var campoValorDigitado = document.getElementById("entrada");
+	var mensagem = document.getElementById("mensagem");
 	var valorDigitado = parseInt(campoValorDigitado.value);
 
 	if (valorDigitado >= 10 && valorDigitado <= 30 
 		&& contadorNumerosDigitados < 6) {
 		numerosDigitados[contadorNumerosDigitados] = valorDigitado;
 		contadorNumerosDigitados++;
-		console.log("Valor adicionado!");
-		console.log(numerosDigitados);
+		mensagem.innerHTML = "";
+		alert("Valor adicionado!");
+	} else {
+		mensagem.innerHTML = "Valor inválido!";
 	}
 
 	if (contadorNumerosDigitados == 6 && verificouAcertos == false) {
 		verificouAcertos = true;
 		comparaNumerosDigitadosComSorteados();
 	}
+
+	campoValorDigitado.value = "";
 }
 
 function comparaNumerosDigitadosComSorteados() {
