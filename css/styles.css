@@ -6,6 +6,14 @@ body {
 	background-size: cover;
 }
 
+.caixa {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+}
+
 .titulo {
 	color: #FFFFFF;
 }
@@ -15,10 +23,14 @@ body {
 	color: #FFFFFF;
 }
 
-.caixa {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-size: 30px;
+.entrada {
+	width: 15%;
+	padding: 8px 15px;
+	font-size: 15px;
+}
+
+.botao {
+	width: 15%;
+	padding: 12px 0;
+	margin-top: 30px;
 }
