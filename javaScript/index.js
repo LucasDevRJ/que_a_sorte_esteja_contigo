@@ -11,7 +11,11 @@ var botao10 = document.getElementById("botao10");
 var botao11 = document.getElementById("botao11");
 var botao12 = document.getElementById("botao12");
 
+var botaoValor = botao1.value = Math.round(Math.random() * 100);
 
+botaoValor.innerHTML = botaoValor;
+
+console.log(botaoValor);
 
 /*
 var numerosSorteados = [];
